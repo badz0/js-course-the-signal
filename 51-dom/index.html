@@ -7,40 +7,46 @@
   <title>Document</title>
 </head>
 <body>
-  <!-- hello -->
+
+
   <div class="container">
-    <h1 class="title" id="main-title">
-      Title <span class="index">1</span>
+    <h1 class="title" style="color: blue">
+      title <span class="title-index">1</span>
     </h1>
-    <button onclick="changeFontSize(true)">+</button>
-    <button onclick="changeFontSize(false)">-</button>
-    <!-- <h1 class="title">Title 2</h1>
-    <h1 class="title">Title 3</h1>
-    <h1 class="title">Title 4</h1> -->
+    <button onclick="changeFont(true)">+</button>
+    <button onclick="changeFont(false)">-</button>
+    <!-- <h1 class="title">
+      title <span class="title-index">2</span>
+    </h1>
+    <h1 class="title">
+      title <span class="title-index">3</span>
+    </h1> -->
   </div>
 
-  <!-- <div>
-    <a class="link" href="http://google.com">link</a>
-  </div> -->
+  <!-- <a class="link" href="google.com">link</a> -->
 
-  <div>
-    <input type="text" id="name-input">
-    <button onclick="addUser()">add user</button>
-    <!-- <button onclick="toggleClass()">toggle</button> -->
-  </div>
 
-  <div class="user-list" data-test="hello">
+  <form name="addUserForm">
+    <label>
+      add user
+      <input class="name-input" type="text" name="userName">
+    </label>
+    <button type="button" onclick="addUser()">add</button>
+  </form>
+
+  <div class="users">
+
   </div>
 
   <style>
     .invalid {
-      border: 2px solid red;
+      border: 1px solid red;
     }
-
-    #main-title {
-      color: blue !important;
+    .title {
+      font-size: 30px !important;
     }
   </style>
+
 
   <script defer src="index.js"></script>
 </body>
